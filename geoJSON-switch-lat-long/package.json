@@ -1,0 +1,43 @@
+{
+  "name": "geojson-switch-lat-long",
+  "version": "1.0.0",
+  "description": "switch geoHashing to geoJSON in a full mongodatabase",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "nodemon src/index.js --exec babel-node",
+    "build": "babel src -d dist",
+    "postinstall": "npm run build",
+    "test": "jest -u"
+  },
+  "author": "simbacod3",
+  "license": "ISC",
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-transform-runtime"
+      ]
+    ]
+  },
+  "dependencies": {
+    "figlet": "^1.5.2",
+    "joi": "^17.6.0",
+    "mongoose": "^6.2.11"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "jest": "^27.5.1",
+    "nodemon": "^2.0.15"
+  }
+}
